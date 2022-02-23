@@ -26,3 +26,6 @@ Creamos test unitario "la_partida_tiene_mas_de_6_jugadores" ,
 para probar que esJugable devuelve false si son mas de 6 jugadores, y 
 creamos test "la_partida_tiene_menos_o_igual_a_6_jugadores"
 para probar que si tiene menos o igual que 6 esJugable devuelve true
+
+## Problema 3
+modificamos tirar dado y ponemos salir de la carcel

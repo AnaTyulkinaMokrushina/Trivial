@@ -7,7 +7,7 @@ public class Game {
     ArrayList jugadores = new ArrayList();
     int[] posiciones = new int[7];
     int[] monederos = new int[7];
-    boolean[] enCasillaCastigo = new boolean[7];
+    public boolean[] enCasillaCastigo = new boolean[7];
 
     LinkedList preguntasCultura = new LinkedList();
     LinkedList preguntasCiencias = new LinkedList();
@@ -62,6 +62,7 @@ public class Game {
         if (enCasillaCastigo[jugadorActual]) {
             if (puntosDado % 2 != 0) {
                 estaSaliendoDeLaCarcel = true;
+                enCasillaCastigo[jugadorActual] = false;
 
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
                 posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;

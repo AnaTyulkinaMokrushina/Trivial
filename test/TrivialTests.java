@@ -81,4 +81,35 @@ public class TrivialTests {
         }
     }
 
+    //Problema 3
+    @Test
+    public void jugador_entra_en_la_carcel_despues_fallar_una_pregunta(){
+        Game game = new Game();
+        game.agregar("Juan");
+        game.agregar("Maria");
+        //tira Juan y se mete en la carcel
+        game.tirarDado(2);
+        game.respuestaIncorrecta();
+        //tira Maria y se mete en la carcel
+        game.tirarDado(3);
+        game.respuestaIncorrecta();
+
+        Assertions.assertTrue( game.enCasillaCastigo[1]);
+    }
+    @Test
+    public void jugador_sale_de_la_carcel_despues_de_sacar_impar(){
+        Game game = new Game();
+        game.agregar("Juan");
+        game.agregar("Maria");
+
+        game.tirarDado(2);
+        game.respuestaIncorrecta();
+
+        game.tirarDado(3);
+        game.fueRespuestaCorrecta();
+
+        game.tirarDado(5);
+        Assertions.assertFalse( game.enCasillaCastigo[0]);
+    }
+
 }
