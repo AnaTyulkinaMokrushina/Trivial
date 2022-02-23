@@ -31,6 +31,7 @@ public class TrivialTests {
         Assertions.assertEquals(expected, actual);
     }
 
+    //Problema 1
     @Test
     public void la_partida_tiene_menos_de_2_jugadores(){
         Game game = new Game();
@@ -45,6 +46,39 @@ public class TrivialTests {
         game.agregar("Maria");
 
         Assertions.assertTrue(game.esJugable());
+    }
+
+    //Problema 2
+    @Test
+    public void la_partida_tiene_mas_de_6_jugadores(){
+        Game game = new Game();
+        try{
+            game.agregar("Juan");
+            game.agregar("Maria");
+            game.agregar("Pepe");
+            game.agregar("Ana");
+            game.agregar("Carlos");
+            game.agregar("Teresa");
+            game.agregar("Marcos");
+            Assertions.assertTrue(game.esJugable());
+        }catch (ArrayIndexOutOfBoundsException e){
+            Assertions.assertFalse(game.esJugable());
+        }
+    }
+    @Test
+    public void la_partida_tiene_menos_o_igual_a_6_jugadores(){
+        Game game = new Game();
+        try{
+            game.agregar("Juan");
+            game.agregar("Maria");
+            game.agregar("Pepe");
+            game.agregar("Ana");
+            game.agregar("Carlos");
+            game.agregar("Teresa");
+            Assertions.assertTrue(game.esJugable());
+        }catch (ArrayIndexOutOfBoundsException e){
+            Assertions.assertFalse(game.esJugable());
+        }
     }
 
 }
