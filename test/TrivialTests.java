@@ -112,4 +112,8 @@ public class TrivialTests {
         Assertions.assertFalse( game.enCasillaCastigo[0]);
     }
 
+   //Problema 5
+
+
+
 }

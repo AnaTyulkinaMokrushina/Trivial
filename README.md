@@ -28,4 +28,14 @@ creamos test "la_partida_tiene_menos_o_igual_a_6_jugadores"
 para probar que si tiene menos o igual que 6 esJugable devuelve true
 
 ## Problema 3
-modificamos tirar dado y ponemos salir de la carcel
+modificamos tirar dado poniendo que "enCasillaCastigo[jugadorActual] = false".
+Tambien se ha modificado enCasillaCastigo para que sea public y asi salga en los test.
+
+Creamos tests unitarios jugador_entra_en_la_carcel_despues_fallar_una_pregunta, que comprueba 
+que el jugador que falla la pregunta entra en la carcel y el test
+jugador_sale_de_la_carcel_despues_de_sacar_impar que comprueba que el jugador
+que saca impar sale de la carcel.
+
+## Problema 4
+Modificados GameLauncher.class, agregando un boolean ganador, el cual implementamos
+en el while. 

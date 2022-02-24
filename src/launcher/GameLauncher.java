@@ -8,6 +8,7 @@ import java.util.Random;
 public class GameLauncher {
 
     private static boolean noGanador;
+    private static boolean ganador;
 
     public static void main(String[] args) {
         Game juego = new Game();
@@ -25,12 +26,12 @@ public class GameLauncher {
             if (rand.nextInt(9) == 7) {
                 noGanador = juego.respuestaIncorrecta();
             } else {
-                noGanador = juego.fueRespuestaCorrecta();
+                ganador = juego.fueRespuestaCorrecta();
             }
 
 
 
-        } while (noGanador);
+        } while (!ganador);
 
     }
 }

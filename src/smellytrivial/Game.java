@@ -74,6 +74,7 @@ public class Game {
             } else {
                 System.out.println(jugadores.get(jugadorActual) + " no sale de la casilla de castigo");
                 estaSaliendoDeLaCarcel = false;
+                enCasillaCastigo[jugadorActual] = true;
             }
 
         } else {
@@ -165,7 +166,7 @@ public class Game {
 
 
     private boolean jugadorHaGanado() {
-        return !(monederos[jugadorActual] == 6);
+        return monederos[jugadorActual] == 7;
     }
 
     public String nuevaPosicionJugador() {
