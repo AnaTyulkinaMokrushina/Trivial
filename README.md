@@ -40,6 +40,9 @@ que saca impar sale de la carcel.
 Modificados GameLauncher.class, agregando un boolean ganador, el cual implementamos
 en el while. 
 
+## Problema 5
+se ha creado un metodo para simplificar el cambio de jugador. 
+
 ## Problema 6
 Se ha modificado el codigo de Game del metodo fueRespuestaCorrecta, para simplificar
 el codigo. 
