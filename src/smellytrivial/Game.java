@@ -66,7 +66,7 @@ public class Game {
 
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
                 posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
-                if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
+
 
                 System.out.println(nuevaPosicionJugador());
                 System.out.println("La categoría es " + categoriaActual());
@@ -80,7 +80,6 @@ public class Game {
         } else {
 
             posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
-            if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
 
             System.out.println(nuevaPosicionJugador());
             System.out.println("La categoría es " + categoriaActual());
@@ -102,6 +101,7 @@ public class Game {
 
 
     private String categoriaActual() {
+
         if (posiciones[jugadorActual] == 0) return "Cultura popular";
         if (posiciones[jugadorActual] == 4) return "Cultura popular";
         if (posiciones[jugadorActual] == 8) return "Cultura popular";
@@ -111,11 +111,13 @@ public class Game {
         if (posiciones[jugadorActual] == 2) return "Deportes";
         if (posiciones[jugadorActual] == 6) return "Deportes";
         if (posiciones[jugadorActual] == 10) return "Deportes";
-        return "Música";
+        return  "Música";
+
     }
 
+
     public boolean fueRespuestaCorrecta() {
-        jugadorActual++;
+        pasar_de_jugador();
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
         if (enCasillaCastigo[jugadorActual]){
             if (estaSaliendoDeLaCarcel) {
@@ -156,7 +158,7 @@ public class Game {
         System.out.println(jugadores.get(jugadorActual)+ " va a la casilla de castigo");
         enCasillaCastigo[jugadorActual] = true;
 
-        jugadorActual++;
+        pasar_de_jugador();
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
         return true;
     }
@@ -167,6 +169,9 @@ public class Game {
     }
 
     public String nuevaPosicionJugador() {
+        while (posiciones[jugadorActual] > 11){
+            posiciones[jugadorActual] = posiciones[jugadorActual] - 11;
+        }
         return "La nueva posición de "
                 + jugadores.get(jugadorActual)
                 + " es "

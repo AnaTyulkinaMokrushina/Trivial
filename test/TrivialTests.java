@@ -112,7 +112,27 @@ public class TrivialTests {
         Assertions.assertFalse( game.enCasillaCastigo[0]);
     }
 
-   //Problema 5
+   //Problema 7
+    @Test
+    public void jugador_no_se_queda_sin_preguntas(){
+        Game game = new Game();
+        game.agregar("Juan");
+        game.agregar("Maria");
+
+        game.tirarDado(6);
+        game.fueRespuestaCorrecta();
+
+        game.tirarDado(6);
+        game.fueRespuestaCorrecta();
+
+        game.tirarDado(6);
+        game.fueRespuestaCorrecta();
+
+        game.tirarDado(6);
+        game.fueRespuestaCorrecta();
+
+        Assertions.assertEquals("La nueva posición de Juan es 1", game.nuevaPosicionJugador());
+    }
 
 
 

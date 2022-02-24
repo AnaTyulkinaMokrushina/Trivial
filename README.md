@@ -43,3 +43,10 @@ en el while.
 ## Problema 6
 Se ha modificado el codigo de Game del metodo fueRespuestaCorrecta, para simplificar
 el codigo. 
+
+## Problema 7
+Se ha modificado el metodo nuevaPosicionJugador() poniendo un bucle con una resta de la 
+posicion del jugador para que se vuelva a poder jugar el tablero.
+
+Se ha creado un test unitario que comprueba que el jugador vuelve a iniciar el tablero despues
+de acabar las 11 casillas. 
