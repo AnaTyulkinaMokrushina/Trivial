@@ -39,3 +39,7 @@ que saca impar sale de la carcel.
 ## Problema 4
 Modificados GameLauncher.class, agregando un boolean ganador, el cual implementamos
 en el while. 
+
+## Problema 6
+Se ha modificado el codigo de Game del metodo fueRespuestaCorrecta, para simplificar
+el codigo. 
